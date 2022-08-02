@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AppTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context=".TutorialActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.05"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tutorial_tutorial_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_small"
+            android:text="@string/tutorial"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+            android:textColor="@color/backgroundTintDark"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tutorial_click_next_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/swipe_left"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+            android:textColor="@color/backgroundTintDark"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tutorial_tutorial_text"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/tutorial_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/padding_small"
+        android:layout_marginRight="@dimen/padding_small"
+        android:layout_weight="0.85"
+        android:clickable="false"
+        android:focusable="false"
+        android:stateListAnimator="@null"
+        android:theme="@style/AppTheme" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/tutorial_progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:forceDarkAllowed="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tutorial_previous"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_medium"
+            android:backgroundTint="@color/backgroundTint"
+            android:elevation="12dp"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:paddingStart="@dimen/padding_vvsmall"
+            android:paddingEnd="@dimen/padding_medium"
+            android:stateListAnimator="@null"
+            android:text="@string/previous"
+            android:textColor="@color/iconTint"
+            app:cornerRadius="@dimen/padding_small_medium"
+            app:icon="@drawable/ic_round_chevron_left_24"
+            app:iconGravity="start"
+            app:iconPadding="0dp"
+            app:iconSize="50dp"
+            app:iconTint="@color/iconTint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="@color/iconTint" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tutorial_next"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_medium"
+            android:backgroundTint="@color/accent"
+            android:elevation="12dp"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:paddingStart="@dimen/padding_medium"
+            android:paddingEnd="@dimen/padding_vvsmall"
+            android:stateListAnimator="@null"
+            android:text="@string/next"
+            android:textColor="@color/iconTintDark"
+            app:cornerRadius="@dimen/padding_small_medium"
+            app:icon="@drawable/ic_round_chevron_right_24"
+            app:iconGravity="end"
+            app:iconPadding="0dp"
+            app:iconSize="50dp"
+            app:iconTint="@color/iconTintDark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="@color/iconTint" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

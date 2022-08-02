@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/timer_picker_layout"
+    style="@style/AppTheme"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/number_picker_dialog"
+    android:backgroundTint="@color/backgroundTint"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/padding_small"
+    android:paddingBottom="@dimen/padding_small"
+    android:theme="@style/AppTheme"
+    android:transitionName="timer_picker_popup_transition">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/toggle_numberpicker_timergroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_small"
+        android:layout_marginTop="@dimen/padding_vsmall"
+        android:layout_marginRight="@dimen/padding_small"
+        android:layout_marginBottom="@dimen/padding_vsmall"
+        android:backgroundTint="@color/iconTintDark"
+        android:elevation="8dp"
+        android:padding="@dimen/padding_small"
+        android:stateListAnimator="@null"
+        android:text="@string/toggle_timer_group_picker"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        android:textColor="@color/iconTint"
+        app:cornerRadius="@dimen/padding_small"
+        app:layout_constraintBottom_toTopOf="@id/timer_group_picker"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="@color/iconTint" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_medium"
+        android:layout_marginRight="@dimen/padding_medium"
+        android:layout_marginBottom="@dimen/padding_small"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/add_new_timer_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/iconTintDark"
+            android:elevation="8dp"
+            android:maxLines="1"
+            android:padding="@dimen/padding_small"
+            android:paddingBottom="@dimen/padding_small"
+            android:stateListAnimator="@null"
+            android:text="@string/new_timer_group"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:textColor="@color/iconTint"
+            android:theme="@style/AppTheme"
+            app:cornerRadius="@dimen/padding_small"
+            app:icon="@drawable/ic_round_add"
+            app:iconGravity="textStart"
+            app:iconTint="@color/iconTint"
+            app:rippleColor="@color/iconTint" />
+
+        <ScrollView
+            android:id="@+id/timer_group_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@id/timer_picker_numbers"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toggle_numberpicker_timergroup">
+
+            <LinearLayout
+                android:id="@+id/new_timer_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="vertical"
+                android:visibility="visible" />
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/timer_picker_numbers"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/padding_medium"
+            android:layout_marginRight="@dimen/padding_medium"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/timer_picker_buttons"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/timer_group_picker">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/TextAppearance.MaterialComponents.Body1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_vsmall"
+                    android:gravity="center_horizontal"
+                    android:text="@string/popup_hours_label"
+                    android:textColor="@color/iconTint" />
+
+                <com.UnayShah.countdownTimer.model.ThemedNumberPicker
+                    android:id="@+id/number_picker_hours"
+                    style="@style/ThemeOverlay.MaterialComponents.PopupNumberPicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:elevation="6dp"
+                    android:stateListAnimator="@null" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/TextAppearance.MaterialComponents.Body1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_vsmall"
+                    android:gravity="center_horizontal"
+                    android:text="@string/popup_minutes_label"
+                    android:textColor="@color/iconTint" />
+
+                <com.UnayShah.countdownTimer.model.ThemedNumberPicker
+                    android:id="@+id/number_picker_minutes"
+                    style="@style/ThemeOverlay.MaterialComponents.PopupNumberPicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:elevation="6dp"
+                    android:stateListAnimator="@null" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/TextAppearance.MaterialComponents.Body1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_vsmall"
+                    android:gravity="center_horizontal"
+                    android:maxLines="1"
+                    android:text="@string/popup_seconds_label"
+                    android:textColor="@color/iconTint" />
+
+                <com.UnayShah.countdownTimer.model.ThemedNumberPicker
+                    android:id="@+id/number_picker_seconds"
+                    style="@style/ThemeOverlay.MaterialComponents.PopupNumberPicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:elevation="6dp"
+                    android:stateListAnimator="@null" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/timer_picker_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timer_picker_numbers">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/set_timer_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_small"
+            android:background="@drawable/popup_buttons"
+            android:backgroundTint="@color/iconTintDark"
+            android:elevation="8dp"
+            android:padding="@dimen/padding_small"
+            android:stateListAnimator="@null"
+            android:text="@string/set"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:textColor="@color/iconTint"
+            android:theme="@style/AppTheme"
+            app:backgroundTint="@color/iconTintDark"
+            app:cornerRadius="@dimen/padding_vsmall"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cancel_set_timer_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="@color/iconTint" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancel_set_timer_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_small"
+            android:background="@drawable/popup_buttons"
+            android:backgroundTint="@color/iconTintDark"
+            android:elevation="8dp"
+            android:padding="@dimen/padding_small"
+            android:paddingStart="@dimen/padding_small_medium"
+            android:paddingEnd="@dimen/padding_small_medium"
+            android:stateListAnimator="@null"
+            android:text="@string/cancel"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:textColor="@color/iconTint"
+            android:theme="@style/AppTheme"
+            app:backgroundTint="@color/iconTintDark"
+            app:cornerRadius="@dimen/padding_vsmall"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/set_timer_button"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="@color/iconTint" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

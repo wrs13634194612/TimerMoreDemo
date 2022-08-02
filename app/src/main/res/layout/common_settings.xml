@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/common_settings"
+    style="@style/AppTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundTint"
+    android:forceDarkAllowed="false"
+    android:orientation="vertical"
+    android:theme="@style/AppTheme"
+    tools:context=".CommonSettings">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/timer_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.MaterialComponents.DayNight"
+        android:transitionName="timer_name_transition"
+        app:navigationIcon="@drawable/ic_round_arrow_back_24"
+        app:popupTheme="@style/AppTheme"
+        app:title="Settings"
+        app:titleTextColor="@color/iconTint" />
+
+    <LinearLayout
+        android:id="@+id/theme_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_small_medium"
+        android:layout_marginEnd="@dimen/padding_small_medium"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="start|center_vertical"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingBottom="@dimen/padding_small"
+        android:weightSum="1">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/theme_textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.55"
+            android:background="?attr/selectableItemBackground"
+            android:backgroundTint="@color/backgroundTint"
+            android:backgroundTintMode="src_atop"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/theme_textView"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textColor="@color/iconTint"
+            android:textSize="@dimen/timer_display_text"
+            android:theme="@style/AppTheme" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/theme_menu_textInputLayout"
+            style="@style/CustomExposedDropdownMenu.Light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.45">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/theme_menu_autocompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/backgroundTint"
+                android:backgroundTint="@color/backgroundTint"
+                android:clickable="true"
+                android:enabled="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:inputType="none"
+                android:textColor="@color/iconTint"
+                android:textSize="@dimen/timer_list_text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/accent_color_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_small_medium"
+        android:layout_marginEnd="@dimen/padding_small_medium"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingBottom="@dimen/padding_small_medium"
+        android:weightSum="1">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/accent_color_textView"
+            style="@style/AppTheme"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.75"
+            android:background="?attr/selectableItemBackground"
+            android:backgroundTint="@color/backgroundTint"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/accent_color_textView"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textColor="@color/iconTint"
+            android:textSize="@dimen/timer_display_text"
+            android:theme="@style/AppTheme" />
+
+        <ImageView
+            android:id="@+id/accent_color_preview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:forceDarkAllowed="false" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/vibration_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_small_medium"
+        android:layout_marginEnd="@dimen/padding_small_medium"
+        android:gravity="start|center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingBottom="@dimen/padding_small"
+        android:weightSum="1">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/vibration_textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.55"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/vibration_text"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textColor="@color/iconTint"
+            android:textSize="@dimen/timer_display_text"
+            android:theme="@style/AppTheme" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/vibration_switch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.45"
+            android:backgroundTint="@color/iconTintDark"
+            android:gravity="center"
+            app:checkedButton="@+id/vibration_switch_on">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/vibration_switch_off"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/iconTintDark"
+                android:padding="@dimen/padding_small"
+                android:stateListAnimator="@null"
+                android:text="@string/off"
+                android:textColor="@color/iconTint" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/vibration_switch_on"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/iconTintDark"
+                android:padding="@dimen/padding_small"
+                android:stateListAnimator="@null"
+                android:text="@string/on"
+                android:textColor="@color/iconTint" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+    </LinearLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/ringtone_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_small_medium"
+        android:layout_marginEnd="@dimen/padding_small_medium"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingBottom="@dimen/padding_small_medium"
+        android:text="@string/ringtone"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        android:textColor="@color/iconTint"
+        android:textSize="@dimen/timer_display_text"
+        android:theme="@style/AppTheme" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/reset_all_settings_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_small_medium"
+        android:layout_marginEnd="@dimen/padding_small_medium"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingBottom="@dimen/padding_small_medium"
+        android:text="@string/reset"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        android:textColor="@color/iconTint"
+        android:textSize="@dimen/timer_display_text"
+        android:theme="@style/AppTheme" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/reset_all_data_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_small_medium"
+        android:layout_marginEnd="@dimen/padding_small_medium"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingBottom="@dimen/padding_small_medium"
+        android:text="@string/clear_all_data"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        android:textColor="@color/iconTint"
+        android:textSize="@dimen/timer_display_text"
+        android:theme="@style/AppTheme" />
+
+</LinearLayout>

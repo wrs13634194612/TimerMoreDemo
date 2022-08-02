@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">My Application</string>
+<string name="action_settings">Settings</string>
+<!-- Strings used for fragments for navigation -->
+<string name="first_fragment_label">First Fragment</string>
+<string name="second_fragment_label">Second Fragment</string>
+
+<string name="start">START</string>
+<string name="stop">STOP</string>
+<string name="add">ADD</string>
+<string name="pause">PAUSE</string>
+<string name="timer_zero">00:00:00</string>
+<string name="set">SET TIMER</string>
+<string name="cancel">CANCEL</string>
+<string name="return_home_button">Return</string>
+<string name="start_pause_button">Start</string>
+<string name="add_button">Add</string>
+
+<string name="timer_name_popup">Enter new timer name:</string>
+<string name="timer_text_placeholder">Timer Name</string>
+<string name="title_image">Title Image</string>
+<string name="toggle_timer_group_picker">Add A Timer Group</string>
+<string name="toggle_number_picker">Set A Timer</string>
+<string name="new_timer_group">New Timer Group</string>
+<string name="popup_hours_label">HH</string>
+<string name="popup_minutes_label">MM</string>
+<string name="popup_seconds_label">SS</string>
+<string name="page_title">Page Title</string>
+<string name="settings">Settings</string>
+<string name="zero">0</string>
+<string name="accent_color_textView">Accent Color</string>
+<string name="reset">Reset All Settings</string>
+<string name="vibration_text">Vibrate</string>
+<string name="on">On</string>
+<string name="off">Off</string>
+<string name="theme_textView">Theme</string>
+<string name="theme">Theme</string>
+<string name="repetitions">Repetitions</string>
+<string name="loop_timer">Loop Timer</string>
+<string name="previous">PREV</string>
+<string name="next">NEXT</string>
+<string name="done">DONE</string>
+<string name="edit_timer">Edit Timer</string>
+<string name="delete_timer">Delete Timer</string>
+<string name="tutorial_drag">Hold &amp; Drag\nto rearrange</string>
+<string name="timer_group_name">Timer Group\nName</string>
+<string name="tutorial">Tutorial:</string>
+<string name="swipe_left">Swipe Left</string>
+<string name="click_the_button">Click the \'+\' button</string>
+<string name="enter_timer_name_in_the_box">Enter timer name\nin the box</string>
+<string name="home">Home</string>
+<string name="set_timer_value_or_nadd_an_existing_timer_group">Set timer value or\nadd an existing timer group</string>
+<string name="timer_time">Timer time</string>
+<string name="click_on_set_timer">Click on \'set timer\'</string>
+<string name="_1">1</string>
+<string name="clear_all_data">Clear All Data</string>
+<string name="no_items_nadd_new">No items\nAdd new</string>
+<string name="set_colour">Set Colour</string>
+<string name="ringtone">Select Ringtone</string>
+<string name="delete_all_timers">Delete All Timers?</string>
+<string name="yes">YES</string>
+<string name="no">NO</string>
+<string name="reset_all_settings">Reset All Settings</string>
+</resources>

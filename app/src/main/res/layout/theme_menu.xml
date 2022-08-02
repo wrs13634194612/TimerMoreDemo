@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.textview.MaterialTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/AppTheme"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroundTint"
+    android:backgroundTint="@color/backgroundTint"
+    android:ellipsize="end"
+    android:maxLines="1"
+    android:padding="@dimen/padding_small"
+    android:textColor="@color/iconTint"
+    android:textSize="@dimen/timer_list_text"
+    android:theme="@style/AppTheme" />

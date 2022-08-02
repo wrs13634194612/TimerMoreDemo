@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tutorial_timer_viewPager"
+    style="@style/AppTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="@color/backgroundTint"
+    android:stateListAnimator="@null"
+    android:theme="@style/AppTheme"
+    app:layout_constraintVertical_weight="1">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/timer_animation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/padding_small"
+        android:layout_marginRight="@dimen/padding_small"
+        android:gravity="center"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/timer_controls_layout"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:rotation="-90"
+                android:src="@drawable/timer_animation" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/timer_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/timer_zero"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/iconTint"
+                android:textStyle="bold"
+                android:theme="@style/AppTheme"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/index_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="@color/iconTint"
+                android:textSize="@dimen/button_text"
+                android:textStyle="bold"
+                android:theme="@style/AppTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/timer_textView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/timer_controls_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/padding_small_medium"
+                android:layout_marginTop="@dimen/padding_vsmall"
+                android:layout_marginRight="@dimen/padding_small_medium"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:theme="@style/AppTheme">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/loop_timer"
+                    android:textColor="@color/iconTint"
+                    android:textSize="@dimen/button_text" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/loop_button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="@dimen/padding_vsmall"
+                    android:layout_marginBottom="@dimen/padding_small_medium"
+                    android:elevation="12dp"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    android:stateListAnimator="@null"
+                    android:theme="@style/AppTheme"
+                    app:backgroundTint="@color/iconTintDark"
+                    app:cornerRadius="@dimen/padding_small_medium"
+                    app:icon="@drawable/ic_round_loop"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_small_medium"
+                android:layout_marginRight="@dimen/padding_small_medium"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/repetitions"
+                    android:textColor="@color/iconTint"
+                    android:textSize="@dimen/button_text" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_vsmall"
+                    android:layout_marginBottom="@dimen/padding_small_medium"
+                    android:background="@drawable/popup_buttons"
+                    android:elevation="6dp"
+                    android:gravity="center"
+                    android:stateListAnimator="@null"
+                    android:theme="@style/AppTheme">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="@dimen/padding_vsmall"
+                        android:layout_marginTop="@dimen/padding_small"
+                        android:layout_marginEnd="@dimen/padding_small"
+                        android:layout_marginBottom="@dimen/padding_small"
+                        android:elevation="12dp"
+                        android:insetLeft="0dp"
+                        android:insetTop="0dp"
+                        android:insetRight="0dp"
+                        android:insetBottom="0dp"
+                        android:shadowColor="@color/iconTint"
+                        android:stateListAnimator="@null"
+                        android:theme="@style/AppTheme"
+                        app:backgroundTint="@color/backgroundTint"
+                        app:icon="@drawable/ic_round_remove_24"
+                        app:iconGravity="textStart"
+                        app:iconPadding="0dp"
+                        app:iconSize="24dp"
+                        app:iconTint="@color/iconTint"
+                        app:rippleColor="@color/iconTint"
+                        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CountdownTimer.Button.Circle" />
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextAppearance.MaterialComponents.Body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_vvsmall"
+                        android:text="0"
+                        android:textColor="@color/iconTint"
+                        android:theme="@style/AppTheme" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="@dimen/padding_small"
+                        android:layout_marginTop="@dimen/padding_small"
+                        android:layout_marginEnd="@dimen/padding_vsmall"
+                        android:layout_marginBottom="@dimen/padding_small"
+                        android:elevation="12dp"
+                        android:insetLeft="0dp"
+                        android:insetTop="0dp"
+                        android:insetRight="0dp"
+                        android:insetBottom="0dp"
+                        android:shadowColor="@color/iconTint"
+                        android:shadowDx="10"
+                        android:shadowDy="10"
+                        android:stateListAnimator="@null"
+                        android:theme="@style/AppTheme"
+                        app:backgroundTint="@color/backgroundTint"
+                        app:icon="@drawable/ic_round_add"
+                        app:iconGravity="textStart"
+                        app:iconPadding="0dp"
+                        app:iconSize="24dp"
+                        app:iconTint="@color/iconTint"
+                        app:rippleColor="@color/iconTint"
+                        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CountdownTimer.Button.Circle" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/tutorial_timerGroupScrollViewRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/padding_vsmall"
+        android:layout_marginEnd="@dimen/padding_vsmall"
+        android:orientation="vertical"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timer_animation_layout">
+
+        <include
+            layout="@layout/tutorial_add_timer_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_vvsmall" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tutorial_play_pause"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/buttons_constraint"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/tutorial_play_pause_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play/Pause"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:textColor="@color/accent"
+            app:layout_constraintEnd_toStartOf="@+id/tutorial_play_pause_image"
+            app:layout_constraintTop_toTopOf="@id/tutorial_play_pause_image" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/tutorial_play_pause_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="-30"
+            android:src="@drawable/ic_pointing_arrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:tint="@color/accent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/buttons_constraint"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/home_button"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/iconTintDark"
+            android:contentDescription="@string/return_home_button"
+            android:elevation="12dp"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:padding="0dp"
+            android:stateListAnimator="@null"
+            android:transitionName="Return Button Transition"
+            app:icon="@drawable/ic_round_home_24"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="24dp"
+            app:iconTint="@color/iconTint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/start_pause_button"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="@color/iconTint"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CountdownTimer.Button.Circle" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/start_pause_button"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:backgroundTint="@color/iconTintDark"
+            android:elevation="12dp"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:padding="0dp"
+            android:src="@drawable/ic_round_play_arrow"
+            android:stateListAnimator="@null"
+            android:transitionName="Return Button Transition"
+            app:icon="@drawable/ic_round_play_arrow"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="50dp"
+            app:iconTint="@color/accent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/home_button"
+            app:layout_constraintRight_toLeftOf="@id/stop_button"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="@color/iconTint"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CountdownTimer.Button.Circle" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/stop_button"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/iconTintDark"
+            android:elevation="12dp"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:padding="0dp"
+            android:visibility="gone"
+            app:icon="@drawable/ic_round_stop"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="24dp"
+            app:iconTint="@color/iconTint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/start_pause_button"
+            app:layout_constraintRight_toLeftOf="@id/home_add_button"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="@color/iconTint"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CountdownTimer.Button.Circle" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/home_add_button"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/iconTintDark"
+            android:contentDescription="@string/add_button"
+            android:elevation="12dp"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:padding="0dp"
+            android:stateListAnimator="@null"
+            android:transitionName="timer_name_popup_transition"
+            app:icon="@drawable/ic_round_add"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="24dp"
+            app:iconTint="@color/iconTint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/stop_button"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="@color/iconTint"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.CountdownTimer.Button.Circle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+<color name="colorPrimary">#6200EE</color>
+<color name="colorPrimaryDark">#3700B3</color>
+<color name="colorAccent">#03DAC5</color>
+<color name="blueGray900DF">#DF263238</color>
+<color name="numberPickerText">#ECEFF1</color>
+<color name="blueGray50">#ECEFF1</color>
+<color name="blueGray100">#CFD8DC</color>
+<color name="blueGray400">#78909C</color>
+<color name="blueGray500">#607D8B</color>
+<color name="blueGray600">#546E7A</color>
+<color name="blueGray700">#455A64</color>
+<color name="blueGray900">#263238</color>
+<color name="blackTransparent66">#66000000</color>
+<color name="blackTransparentAA">#AA000000</color>
+
+<color name="background">#FF364156</color>
+<color name="timerLayoutButtons">#FF11151C</color>
+<color name="timerList">#FF212D40</color>
+<color name="text">#F1F7ED</color>
+<color name="textTransparent55">#55424242</color>
+<color name="textTransparent55Dark">#55F5F5F5</color>
+<color name="accent">#0277BD</color>
+<color name="oldAccent">#D66853</color>
+
+<color name="iconTint">#424242</color>
+<color name="iconTintDark">#FAFAFA</color>
+<color name="backgroundTint">#E0E0E0</color>
+<color name="backgroundTintDark">#212121</color>
+<color name="textLight">#202020</color>
+</resources>

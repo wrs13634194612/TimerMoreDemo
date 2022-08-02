@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/AppTheme"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/padding_vvsmall"
+    android:background="@drawable/number_picker_dialog"
+    android:forceDarkAllowed="false"
+    android:padding="@dimen/padding_small_medium"
+    android:theme="@style/AppTheme">
+
+    <TextView
+        android:id="@+id/confirmation_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_small"
+        android:paddingLeft="@dimen/padding_small"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingRight="@dimen/padding_small"
+        android:paddingBottom="@dimen/padding_small"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        android:textColor="@color/iconTint"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/yes_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_small"
+        android:background="@drawable/popup_buttons"
+        android:elevation="8dp"
+        android:padding="@dimen/padding_small"
+        android:stateListAnimator="@null"
+        android:text="@string/yes"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        android:textColor="@color/iconTint"
+        android:theme="@style/AppTheme"
+        app:backgroundTint="@color/iconTintDark"
+        app:cornerRadius="@dimen/padding_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/no_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/confirmation_textView"
+        app:rippleColor="@color/iconTint" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/no_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_small"
+        android:background="@drawable/popup_buttons"
+        android:elevation="8dp"
+        android:padding="@dimen/padding_small"
+        android:stateListAnimator="@null"
+        android:text="@string/no"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        android:textColor="@color/iconTint"
+        android:theme="@style/AppTheme"
+        app:backgroundTint="@color/iconTintDark"
+        app:cornerRadius="@dimen/padding_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/yes_button"
+        app:layout_constraintTop_toBottomOf="@id/confirmation_textView"
+        app:rippleColor="@color/iconTint" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

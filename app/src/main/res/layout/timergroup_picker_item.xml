@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.textview.MaterialTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/timer_group_picker_name"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical|start"
+    android:background="@drawable/add_timer"
+    android:backgroundTint="@color/backgroundTint"
+    android:paddingStart="@dimen/padding_small"
+    android:paddingTop="@dimen/padding_small_medium"
+    android:paddingEnd="@dimen/padding_small"
+    android:paddingBottom="@dimen/padding_small_medium"
+    android:textAlignment="gravity"
+    android:textColor="@color/iconTint"
+    android:textSize="@dimen/timer_list_text" />
